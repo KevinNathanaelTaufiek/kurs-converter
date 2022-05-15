@@ -1,0 +1,111 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap");
+
+$bg-color: #272f35;
+$bg-color-secondary: #728185;
+$color-primary: #3766fa;
+$color-primary-hover: #315ae0;
+$text-color: #ffffff;
+$border-radius: 1rem;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: $bg-color;
+  font-family: "Open Sans", sans-serif;
+  color: $text-color;
+}
+
+.container {
+  padding: 2rem 8rem;
+}
+
+.flex-wrapper {
+  display: flex;
+
+  &.justify-center {
+    justify-content: center;
+  }
+
+  &.align-center {
+    align-items: center;
+  }
+
+  &.vertical {
+    flex-direction: column;
+  }
+}
+
+.text-center {
+  text-align: center;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 600;
+}
+
+p {
+  font-weight: 400;
+}
+
+.box {
+  background-color: $bg-color-secondary;
+  padding: 2rem;
+  margin: 2rem;
+  border-radius: $border-radius;
+
+  * {
+    margin: 0.8rem;
+  }
+}
+
+.form-control {
+  height: 3.2rem;
+  width: 16rem;
+  padding: 0.8rem;
+  border: none;
+  border-radius: $border-radius;
+}
+
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.2rem 2.2rem;
+  background-color: $color-primary;
+  color: $text-color;
+  font-weight: 600;
+  font-size: large;
+  border: none;
+  border-radius: $border-radius;
+  cursor: pointer;
+  transition: all 0.4s;
+
+  &:hover {
+    background-color: $color-primary-hover;
+    transform: scale(1.1, 1.1);
+  }
+}
+
+.btn-small {
+  @extend .btn-primary, .flex-wrapper;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem;
+}
+.btn-disabled {
+  @extend .btn-primary;
+  background-color: $bg-color-secondary;
+  &:hover {
+    background-color: $bg-color-secondary;
+    transform: none;
+  }
+}

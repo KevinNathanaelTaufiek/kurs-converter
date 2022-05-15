@@ -3,7 +3,6 @@ import ButtonConvert from "../components/Button";
 import CurrencyBox from "../components/CurrencyBox";
 import PairContext, { PairItem } from "../Context/PairContext";
 import { FaExchangeAlt } from "react-icons/fa";
-import payload from "../_mock/pairConversion.json";
 import { getPairConvertResult } from "../Context/APIContext";
 
 const ConvertPage = () => {

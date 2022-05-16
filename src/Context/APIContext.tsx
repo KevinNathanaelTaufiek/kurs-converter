@@ -1,8 +1,8 @@
 import axios from "axios";
 import { createContext, useEffect, useState } from "react";
 
-import codesPayload from "../_mock/supportedCode.json";
-import conversionPayload from "../_mock/pairConversion.json";
+// import codesPayload from "../_mock/supportedCode.json";
+// import conversionPayload from "../_mock/pairConversion.json";
 
 interface APIContextModel {
   supportedCodes: string[][];

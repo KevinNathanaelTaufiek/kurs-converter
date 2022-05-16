@@ -21,6 +21,12 @@ body {
 
 .container {
   padding: 2rem 8rem;
+  overflow-x: hidden;
+
+  // small
+  @media screen and (max-width: 667px) {
+    padding: 1.2rem 0.4rem;
+  }
 }
 
 .flex-wrapper {
@@ -35,6 +41,10 @@ body {
   }
 
   &.vertical {
+    flex-direction: column;
+  }
+
+  @media screen and (max-width: 992px) {
     flex-direction: column;
   }
 }
@@ -64,6 +74,10 @@ p {
 
   * {
     margin: 0.8rem;
+  }
+
+  @media screen and (max-width: 992px) {
+    padding: 0.4rem;
   }
 }
 

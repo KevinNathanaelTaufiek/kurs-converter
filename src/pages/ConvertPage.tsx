@@ -26,11 +26,9 @@ const ConvertPage = () => {
       currentCurrency.nominal
     )
       .then((res) => {
-        // console.log(res);
-
         const pairItem: PairItem = {
-          code: res.data.target_code,
-          nominal: res.data.conversion_result,
+          code: res.target_code,
+          nominal: res.conversion_result,
         };
         setOppositeCurrency(pairItem);
       })
